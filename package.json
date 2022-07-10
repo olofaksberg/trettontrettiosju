@@ -1,0 +1,19 @@
+{
+  "name": "trettontrettiosju",
+  "version": "1.0.0",
+  "description": "elite of 1337",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olofaksberg/trettontrettiosju.git"
+  },
+  "author": "olofaksberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olofaksberg/trettontrettiosju/issues"
+  },
+  "homepage": "https://github.com/olofaksberg/trettontrettiosju#readme"
+}
