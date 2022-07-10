@@ -1,0 +1,26 @@
+{
+  "name": "trettontrettiosju",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "elite of 1337",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olofaksberg/trettontrettiosju.git"
+  },
+  "author": "olofaksberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olofaksberg/trettontrettiosju/issues"
+  },
+  "homepage": "https://github.com/olofaksberg/trettontrettiosju#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "node-fetch": "^3.2.6"
+  }
+}

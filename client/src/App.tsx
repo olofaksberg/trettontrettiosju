@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+/** @format */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { useEffect } from "react";
+import { GET } from "./utils";
+
+const App = () => {
+ useEffect(() => {
+  const abortController = new AbortController();
+  GET("/get_employees", abortController.signal);
+  return () => abortController.abort();
+ }, []);
+
+ return <div className="App"></div>;
+};
 
 export default App;
