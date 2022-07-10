@@ -1,6 +1,7 @@
 {
   "name": "trettontrettiosju",
   "version": "1.0.0",
+  "type": "module",
   "description": "elite of 1337",
   "main": "index.js",
   "scripts": {
