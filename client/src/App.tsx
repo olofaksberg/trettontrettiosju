@@ -1,16 +1,13 @@
 /** @format */
 
-import { useEffect } from "react";
-import { GET } from "./utils";
+import { EmployeesContainer } from "./components";
 
 const App = () => {
- useEffect(() => {
-  const abortController = new AbortController();
-  GET("/get_employees", abortController.signal);
-  return () => abortController.abort();
- }, []);
-
- return <div className="App"></div>;
+ return (
+  <div className="App">
+   <EmployeesContainer />
+  </div>
+ );
 };
 
 export default App;
