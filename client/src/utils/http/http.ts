@@ -1,4 +1,3 @@
-import { ErrorCallback } from "typescript";
 import { IGET } from "./http.types";
 
 const api_address = "http://localhost:8001";
