@@ -5,7 +5,6 @@ import {
  employeesActions,
  employeesData,
 } from "../../../store/employees/employeesSlice";
-import { If } from "../../helpers";
 
 import { Image } from "../../layouts";
 

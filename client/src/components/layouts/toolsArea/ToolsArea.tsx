@@ -93,11 +93,13 @@ export const ToolsArea = () => {
       text="Reset"
       iconClassName="fa-solid fa-minus"
       action={() => dispatch(setFilteredEmployees(false))}
+      customStyle={{ background: "rgb(255, 98, 98)" }}
      />
      <Button
       text="Search"
       iconClassName="fa-solid fa-magnifying-glass"
       action={() => dispatch(setFilteredEmployees(filter))}
+      customStyle={{ background: "#0c0c91" }}
      />
     </div>
    </section>
