@@ -36,13 +36,13 @@
      font-size: 2rem;
 
      &.fa-linkedin {
-      color: #0072b1;
+      color: $linkedinBlue;
      }
      &.fa-github {
-      color: #171515;
+      color: $githubBlack;
      }
      &.fa-twitter {
-      color: #1da1f2;
+      color: $twitterBlue;
      }
     }
    }
