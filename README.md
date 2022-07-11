@@ -36,14 +36,14 @@ The thoughts behind the design of the code:
 
 Motivation and reasoning of installed packages:
 * Client:
-** node-sass: I like styling in scss more than in css. Comes more naturally. Sometimes I style only with the help of the package "styled-components", it makes it easier to style with dynamical values. For this product it wasnt really needed.
-** react-redux & @reduxjs/toolkit: Great tools for saving rows of code and keeping it clean. Also easier to manage states.
+* node-sass: I like styling in scss more than in css. Comes more naturally. Sometimes I style only with the help of the package "styled-components", it makes it easier to style with dynamical values. For this product it wasnt really needed.
+* react-redux & @reduxjs/toolkit: Great tools for saving rows of code and keeping it clean. Also easier to manage states.
 
 * API:
-** express: Most of the cases I've made I've used Express for my backend. I feel comfortable using it.
-** cors: I really don't want to be blocked by CORS-policy :(
-** dotenv: keeps my secrets safe.
-** node-fetch: Needed for fetching the employees-API.
+* express: Most of the cases I've made I've used Express for my backend. I feel comfortable using it.
+* cors: I really don't want to be blocked by CORS-policy :(
+* dotenv: keeps my secrets safe.
+* node-fetch: Needed for fetching the employees-API.
 
 
 .......
