@@ -10,7 +10,7 @@ import { Button, InputText, InputCheckbox } from "../general";
 import "./toolsArea.style.scss";
 
 export const ToolsArea = () => {
- const { employees } = useSelector(employeesData);
+ const { employees, layout } = useSelector(employeesData);
 
  const [filter, setFilter] = useState({
   name: "",
@@ -63,6 +63,20 @@ export const ToolsArea = () => {
      />
     </div>
    </section>
+   <div className="layouts">
+    <i
+     className="fa-solid fa-list"
+     onClick={() => {
+      if (layout !== 1) console.log("swag");
+     }}
+    ></i>
+    <i
+     className="fa-solid fa-qrcode"
+     onClick={() => {
+      if (layout !== 0) console.log("swag");
+     }}
+    ></i>
+   </div>
   </section>
  );
 };
