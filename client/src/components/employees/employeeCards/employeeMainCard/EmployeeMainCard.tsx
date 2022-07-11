@@ -1,4 +1,5 @@
 /** @format */
+
 import { Image } from "../../../layouts";
 import { IemployeeMainCardProps } from "./employeeMainCard.types";
 
@@ -11,6 +12,7 @@ export const EmployeeMainCard = (props: IemployeeMainCardProps) => {
  const { employee } = props;
  const dispatch = useDispatch();
  const { setChosenEmployee } = useSelector(employeesActions);
+
  return (
   <div className={`employee-maincard flex FD-C JC-SB`}>
    <div className="card-top">
