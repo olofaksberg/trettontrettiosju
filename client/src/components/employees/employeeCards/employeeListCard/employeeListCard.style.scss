@@ -1,4 +1,77 @@
 /** @format */
+@import "../../../../style/color";
 
 .employee-listcard {
+ * {
+  //   border: 1px solid black;
+ }
+
+ height: 20rem;
+ width: 100%;
+ background-color: white;
+ gap: 2rem;
+
+ //  image
+ .image-container {
+  min-width: 15rem;
+  max-width: 15rem;
+ }
+
+ //  info
+ .info-container {
+  min-width: 20rem;
+  padding: 0.5rem 1rem 1rem;
+  .emp-name {
+   text-transform: uppercase;
+   letter-spacing: 0.3rem;
+   text-align: center;
+  }
+
+  .icons {
+   gap: 1rem;
+   margin-top: 0.5rem;
+
+   i {
+    font-size: 2rem;
+
+    &.fa-linkedin {
+     color: $linkedinBlue;
+    }
+    &.fa-github {
+     color: $githubBlack;
+    }
+    &.fa-twitter {
+     color: $twitterBlue;
+    }
+   }
+  }
+
+  .contact-info {
+   margin-top: 2rem;
+  }
+ }
+
+ .more-info {
+  padding-right: 0.5rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 5px;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+   width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+   background: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+   background: #888;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+   background: #555;
+  }
+ }
 }

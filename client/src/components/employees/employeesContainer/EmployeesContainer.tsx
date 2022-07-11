@@ -23,7 +23,7 @@ export const EmployeesContainer = () => {
  return (
   <section className={`employees-container ${layout === 0 ? "cards" : "list"}`}>
    {showData.map((d: any, i: number) => {
-    return layout === 1 ? (
+    return layout === 0 ? (
      <EmployeeListCard employee={d} />
     ) : (
      <EmployeeMainCard employee={d} />
