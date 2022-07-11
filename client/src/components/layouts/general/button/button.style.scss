@@ -1,0 +1,43 @@
+/** @format */
+
+.button {
+ width: fit-content;
+ height: fit-content;
+ text-align: center;
+ display: inline-block;
+ position: relative;
+ text-decoration: none;
+ text-transform: uppercase;
+ border: none;
+ font-weight: 800;
+ border-radius: 50rem;
+ transition: all 0.2s linear 0s;
+ overflow: hidden;
+ cursor: pointer;
+ padding: 0.5rem 1rem;
+ color: white;
+
+ //  margin: 0 auto;
+
+ .icon {
+  width: 1.5rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  transition: all 0.2s linear 0s;
+ }
+
+ &:hover {
+  padding-right: 1.8rem;
+
+  .icon {
+   opacity: 1;
+   right: 0.2rem;
+  }
+ }
+}
