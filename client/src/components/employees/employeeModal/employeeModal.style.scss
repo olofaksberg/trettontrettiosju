@@ -1,0 +1,80 @@
+/** @format */
+@import "../../../style/color";
+
+.employee-modal {
+ background: rgba(0, 0, 0, 0.65);
+ bottom: 0;
+ left: 0;
+ right: 0;
+ top: 0;
+ overflow: auto;
+ position: fixed;
+ text-align: center;
+ z-index: 10;
+
+ .container {
+  position: relative;
+  height: 90%;
+  background: white;
+  border-radius: 20px 25px 0 0;
+  width: 80%;
+  margin: 2.5% auto;
+
+  .modal-left {
+   min-width: 40%;
+   padding: 2rem;
+   overflow-y: scroll;
+   overflow-x: hidden;
+   scrollbar-width: 5px;
+   scroll-behavior: smooth;
+
+   &::-webkit-scrollbar {
+    width: 5px;
+   }
+
+   &::-webkit-scrollbar-track {
+    background: white;
+   }
+
+   &::-webkit-scrollbar-thumb {
+    background: #888;
+   }
+
+   &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+   }
+
+   .emp-name {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-align: center;
+   }
+  }
+
+  .modal-right {
+   max-width: 60%;
+   min-width: 60%;
+
+   .image-container {
+    height: 100%;
+    border-radius: 0 20px 0 0;
+   }
+  }
+  .close-modal {
+   position: absolute;
+   right: 1rem;
+   top: 0.5rem;
+   cursor: pointer;
+
+   &:hover {
+    transform: scale(1.2);
+   }
+
+   i {
+    font-size: 2.5rem;
+    color: $mainRed;
+   }
+  }
+ }
+}

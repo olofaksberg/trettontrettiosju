@@ -3,6 +3,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { EmployeesContainer } from "./components/employees";
+import { EmployeeModal } from "./components/employees/employeeModal/EmployeeModal";
+import { If } from "./components/helpers";
 import { Header, ToolsArea } from "./components/layouts";
 import { statuses } from "./constants/http/statuses";
 import { AppDispatch } from "./store";
@@ -13,7 +15,7 @@ import "./style/main.scss";
 
 const App = () => {
  const dispatch = useDispatch<AppDispatch>();
- const { employeesStatus } = useSelector(employeesData);
+ const { employeesStatus, chosenEmployee } = useSelector(employeesData);
 
  useEffect(() => {
   if (employeesStatus === statuses.IDLE) {
@@ -29,6 +31,10 @@ const App = () => {
 
  return (
   <div className="App">
+   <If condition={!!chosenEmployee}>
+    <EmployeeModal />
+   </If>
+
    <Header />
    <ToolsArea />
    <EmployeesContainer />

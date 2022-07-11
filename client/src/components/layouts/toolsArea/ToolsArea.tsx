@@ -15,7 +15,7 @@ import "./toolsArea.style.scss";
 export const ToolsArea = () => {
  const dispatch = useDispatch();
  const { employees, layout } = useSelector(employeesData);
- const { setLayout } = useSelector(employeesActions);
+ const { setLayout, setFilteredEmployees } = useSelector(employeesActions);
 
  const [filter, setFilter] = useState({
   name: "",
@@ -32,7 +32,14 @@ export const ToolsArea = () => {
        name="search"
        label="Search employee"
        value={filter.name}
-       action={() => console.log("swag")}
+       action={(e) =>
+        setFilter((prev: any) => {
+         return {
+          ...prev,
+          name: e.target.value,
+         };
+        })
+       }
       />
 
       <If condition={filter.name !== ""}>
@@ -40,7 +47,20 @@ export const ToolsArea = () => {
         {employees
          .filter((d: any) => d.name.includes(filter.name))
          .map((d: any) => {
-          return <div onClick={() => console.log("swag")}>{d.name}</div>;
+          return (
+           <div
+            onClick={() => {
+             setFilter((prev: any) => {
+              return {
+               ...prev,
+               name: d.name,
+              };
+             });
+            }}
+           >
+            {d.name}
+           </div>
+          );
          })}
        </div>
       </If>
@@ -49,7 +69,20 @@ export const ToolsArea = () => {
      <div className="flex FD-C JC-SA">
       {offices.map((d) => {
        return (
-        <InputCheckbox name={d} label={d} action={() => console.log("swag")} />
+        <InputCheckbox
+         name={d}
+         label={d}
+         action={(e) =>
+          setFilter((prev: any) => {
+           return {
+            ...prev,
+            office: prev.office.includes(e.target.name)
+             ? prev.office.filter((d: any) => d !== e.target.name)
+             : [...prev.office, e.target.name],
+           };
+          })
+         }
+        />
        );
       })}
      </div>
@@ -59,12 +92,12 @@ export const ToolsArea = () => {
      <Button
       text="Reset"
       iconClassName="fa-solid fa-minus"
-      action={() => console.log("swag")}
+      action={() => dispatch(setFilteredEmployees(false))}
      />
      <Button
       text="Search"
       iconClassName="fa-solid fa-magnifying-glass"
-      action={() => console.log("swag")}
+      action={() => dispatch(setFilteredEmployees(filter))}
      />
     </div>
    </section>
