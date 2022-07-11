@@ -26,7 +26,6 @@ export const ToolsArea = () => {
   <section className="tools-container">
    <h1>Search Employees</h1>
    <section className="input-container flex JC-C FG-10">
-    {/* <div className="flex FG-4"> */}
     <div className="m-top-1">
      <InputText
       name="search"
@@ -87,20 +86,17 @@ export const ToolsArea = () => {
       );
      })}
     </div>
-    {/* </div> */}
    </section>
    <div className="flex JC-C FG-2">
     <Button
      text="Reset"
      iconClassName="fa-solid fa-minus"
      action={() => dispatch(setFilteredEmployees(false))}
-     customStyle={{ background: "rgb(255, 98, 98)" }}
     />
     <Button
      text="Search"
      iconClassName="fa-solid fa-magnifying-glass"
      action={() => dispatch(setFilteredEmployees(filter))}
-     customStyle={{ background: "#0c0c91" }}
     />
    </div>
   </section>

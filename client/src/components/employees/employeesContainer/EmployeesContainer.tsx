@@ -1,10 +1,7 @@
 /** @format */
 
-import { useDispatch, useSelector } from "react-redux";
-import {
- employeesActions,
- employeesData,
-} from "../../../store/employees/employeesSlice";
+import { useSelector } from "react-redux";
+import { employeesData } from "../../../store/employees/employeesSlice";
 
 import "./employeesContainer.style.scss";
 import { EmployeeListCard, EmployeeMainCard } from "../employeeCards";
@@ -12,17 +9,15 @@ import { useEffect, useState } from "react";
 import { LayoutSettings } from "./components";
 
 export const EmployeesContainer = () => {
- const dispatch = useDispatch();
  const { employees, filteredEmployees, layout } = useSelector(employeesData);
- const { setLayout } = useSelector(employeesActions);
 
- const [showData, setShowData] = useState([]);
+ const [employeesArray, setEmployeesArray] = useState([]);
 
  useEffect(() => {
   if (filteredEmployees.length > 0) {
-   setShowData(filteredEmployees);
+   setEmployeesArray(filteredEmployees);
   } else {
-   setShowData(employees);
+   setEmployeesArray(employees);
   }
  }, [filteredEmployees]);
 
@@ -32,7 +27,7 @@ export const EmployeesContainer = () => {
    <section
     className={`employees-container ${layout === 0 ? "cards" : "list"}`}
    >
-    {showData.map((d: any, i: number) => {
+    {employeesArray.map((d: any, i: number) => {
      return layout === 1 ? (
       <EmployeeListCard employee={d} />
      ) : (

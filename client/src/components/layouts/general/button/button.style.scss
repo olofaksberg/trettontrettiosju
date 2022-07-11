@@ -1,6 +1,9 @@
 /** @format */
 
+@import "../../../../style/color";
+
 .button {
+ background: $mainBlue;
  width: fit-content;
  height: fit-content;
  text-align: center;
@@ -17,8 +20,6 @@
  padding: 0.5rem 1rem;
  color: white;
 
- //  margin: 0 auto;
-
  .icon {
   width: 1.5rem;
   position: absolute;
@@ -30,6 +31,10 @@
   opacity: 0;
   height: 100%;
   transition: all 0.2s linear 0s;
+
+  i {
+   color: $mainGreen;
+  }
  }
 
  &:hover {
