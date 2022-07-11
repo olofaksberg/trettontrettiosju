@@ -15,7 +15,7 @@ export const Image = (props: IimageProps) => {
    </If>
 
    <If condition={!source}>
-    <div className="no-img">Ingen bild :(</div>
+    <div className="no-img">No pic :(</div>
    </If>
   </div>
  );
