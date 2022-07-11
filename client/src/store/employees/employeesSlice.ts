@@ -28,7 +28,8 @@ export const employeesSlice = createSlice({
 export const employeesActions = () => {
     const origin = employeesSlice.actions;
     return {
-
+        setChosenEmployee: origin.setChosenEmployee,
+        setLayout: origin.setLayout,
     };
 };
 
