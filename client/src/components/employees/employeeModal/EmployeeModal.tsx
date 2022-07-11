@@ -21,7 +21,7 @@ export const EmployeeModal = () => {
     <div className="modal-left">
      <h1 className="emp-name">{chosenEmployee.name}</h1>
 
-     <div>{chosenEmployee.mainText}</div>
+     <div>{chosenEmployee.mainText.replaceAll(/<[^>]*>/g, " ")}</div>
     </div>
     <div className="modal-right">
      <Image source={chosenEmployee.imageWallOfLeetUrl} />
