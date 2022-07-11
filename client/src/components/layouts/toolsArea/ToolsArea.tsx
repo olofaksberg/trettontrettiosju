@@ -1,28 +1,22 @@
 /** @format */
 
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { offices } from "../../../constants/employees";
-import {
- employeesActions,
- employeesData,
-} from "../../../store/employees/employeesSlice";
 import { If } from "../../helpers";
 import { Button, InputText, InputCheckbox } from "../general";
 
 import "./toolsArea.style.scss";
+import { useHandleToolsArea } from "./utils";
 
 export const ToolsArea = () => {
- const dispatch = useDispatch();
- const { employees } = useSelector(employeesData);
- const { setFilteredEmployees } = useSelector(employeesActions);
-
- const [showSearch, setShowSearch] = useState(false);
-
- const [filter, setFilter] = useState({
-  name: "",
-  office: [],
- });
+ const {
+  employees,
+  showSearch,
+  setShowSearch,
+  filter,
+  setFilter,
+  reset,
+  search,
+ } = useHandleToolsArea();
 
  return (
   <section className="tools-container">
@@ -34,6 +28,7 @@ export const ToolsArea = () => {
      ></i>
     </span>
    </h1>
+
    <If condition={showSearch}>
     <>
      <section className="input-container flex JC-C FG-10">
@@ -98,16 +93,17 @@ export const ToolsArea = () => {
        })}
       </div>
      </section>
-     <div className="flex JC-C FG-2">
+
+     <div className="flex JC-C FG-2 m-top-1">
       <Button
        text="Reset"
        iconClassName="fa-solid fa-minus"
-       action={() => dispatch(setFilteredEmployees(false))}
+       action={() => reset()}
       />
       <Button
        text="Search"
        iconClassName="fa-solid fa-magnifying-glass"
-       action={() => dispatch(setFilteredEmployees(filter))}
+       action={() => search()}
       />
      </div>
     </>
