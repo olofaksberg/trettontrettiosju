@@ -9,6 +9,8 @@ import { AppDispatch } from "./store";
 import { employeesData } from "./store/employees/employeesSlice";
 import { fetchEmployees } from "./store/employees/reducers";
 
+import "./style/main.scss";
+
 const App = () => {
  const dispatch = useDispatch<AppDispatch>();
  const { employeesStatus } = useSelector(employeesData);

@@ -4,13 +4,14 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import { fetchActions, stateActions } from "./reducers";
 import { IinitState } from "./employeesSlice.types";
+import { statuses } from "../../constants/http/statuses";
 
 const initialState: IinitState = {
     employees: [],
     chosenEmployee: null,
     layout: 0,
     filteredEmployees: [],
-    status: 0,
+    status: statuses.IDLE,
     error: null,
     message: null,
 };

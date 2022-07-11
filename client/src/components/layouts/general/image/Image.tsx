@@ -1,6 +1,6 @@
 /** @format */
 
-import { If } from "../../../heplers/if";
+import { If } from "../../../helpers";
 import { IimageProps } from "./image.types";
 
 import "./image.style.scss";
