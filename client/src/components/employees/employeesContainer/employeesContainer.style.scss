@@ -1,0 +1,17 @@
+/** @format */
+
+.employees-container {
+ display: flex;
+ gap: 2rem;
+ padding: 2rem;
+
+ &.cards {
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+ }
+
+ &.list {
+  flex-direction: column;
+ }
+}

@@ -1,0 +1,25 @@
+/** @format */
+
+$spaceamounts: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+$sides: (top, bottom, left, right);
+@each $space in $spaceamounts {
+ .p-#{$space} {
+  padding: #{$space}rem !important;
+ }
+ .m-#{$space} {
+  margin: #{$space}rem !important;
+ }
+
+ .FG-#{$space} {
+  gap: #{$space}rem !important;
+ }
+
+ @each $side in $sides {
+  .m-#{$side}-#{$space} {
+   margin-#{$side}: #{$space}rem !important;
+  }
+  .p-#{$side}-#{$space} {
+   padding-#{$side}: #{$space}rem !important;
+  }
+ }
+}
