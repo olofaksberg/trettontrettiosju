@@ -31,6 +31,7 @@ export const employeesActions = () => {
     return {
         setChosenEmployee: origin.setChosenEmployee,
         setLayout: origin.setLayout,
+        setFilteredEmployees: origin.setFilteredEmployees,
     };
 };
 
