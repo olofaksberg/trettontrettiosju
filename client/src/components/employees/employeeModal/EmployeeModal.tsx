@@ -5,6 +5,7 @@ import {
  employeesActions,
  employeesData,
 } from "../../../store/employees/employeesSlice";
+import { If } from "../../helpers";
 
 import { Image } from "../../layouts";
 
@@ -15,13 +16,17 @@ export const EmployeeModal = () => {
  const { chosenEmployee } = useSelector(employeesData);
  const { setChosenEmployee } = useSelector(employeesActions);
 
+ const mainText = chosenEmployee.mainText
+  ? chosenEmployee.mainText.replaceAll(/<[^>]*>/g, " ")
+  : `No text about ${chosenEmployee.name.split(" ")[0]}`;
+
  return (
   <section className="employee-modal">
    <div className="container flex JC-SB">
     <div className="modal-left">
      <h1 className="emp-name">{chosenEmployee.name}</h1>
 
-     <div>{chosenEmployee.mainText.replaceAll(/<[^>]*>/g, " ")}</div>
+     <div>{mainText}</div>
     </div>
     <div className="modal-right">
      <Image source={chosenEmployee.imageWallOfLeetUrl} />
