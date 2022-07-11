@@ -4,6 +4,6 @@ export interface IinitState {
     layout: number,
     filteredEmployees: any[],
     status: number,
-    error: string | null,
+    error: string | null | undefined,
     message: string | null,
 }
