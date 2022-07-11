@@ -1,4 +1,4 @@
-export interface IemployeeCardProps {
+export interface IemployeeMainCardProps {
     employee: {
         email: string | null,
         gitHub: string | null,

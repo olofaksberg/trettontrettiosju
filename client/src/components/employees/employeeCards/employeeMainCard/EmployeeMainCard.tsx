@@ -1,8 +1,10 @@
 /** @format */
 
-import { IemployeeCardProps } from "./employeeMainCard.types";
+import { IemployeeMainCardProps } from "./employeeMainCard.types";
 
-export const EmployeeMainCard = (props: IemployeeCardProps) => {
+import "./employeeMainCard.style.scss";
+
+export const EmployeeMainCard = (props: IemployeeMainCardProps) => {
  const { employee } = props;
  return <div className={`employee-maincard`}></div>;
 };
