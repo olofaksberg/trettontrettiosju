@@ -1,9 +1,8 @@
 # trettontrettiosju
 
----
 
 A short description of the product:
-The product is made to let you get to know the employees of 1337 a bit better! Where they are located, their contact information, how they look and so on.. You can also read a personal text, written by themselves. It can include a background story, what they're up to on their freetime, or what desserts they prefer. Basically anything :).
+* The product is made to let you get to know the employees of 1337 a bit better! Where they are located, their contact information, how they look and so on.. You can also read a personal text, written by themselves. It can include a background story, what they're up to on their freetime, or what desserts they prefer. Basically anything :).
 You can also search and filter employees! See how many there are located in Skåne for example, by checking the office-checkboxes "Lund" and "Helsingborg". Or maybe you know someone who knows someone that's named something that starts with an A and is located in Ljubljana, and you're dying to know that persons full name.. Then check "Ljubljana" and put and "a" in the "Name" input and click search!
 There is also the possibility to change the employees layout. Choose between a presentation of cards or as a list.
 
