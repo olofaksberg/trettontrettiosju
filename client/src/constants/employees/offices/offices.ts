@@ -1,0 +1,1 @@
+export const offices = ["Borlänge", "Helsingborg", "Ljubljana", "Lund", "Stockholm"]

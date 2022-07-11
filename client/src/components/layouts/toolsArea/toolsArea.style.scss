@@ -1,4 +1,44 @@
 /** @format */
 
 .tools-container {
+ height: 20rem;
+ padding: 1rem;
+ background-color: white;
+
+ h1 {
+  height: 4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+  text-align: center;
+ }
+
+ .input-container {
+  height: calc(20rem - 4.8rem);
+ }
+
+ .searchRes {
+  max-height: calc(20rem - 8.8rem);
+  width: 30rem;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 5px;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+   width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+   background: white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+   background: #888;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+   background: #555;
+  }
+ }
 }
