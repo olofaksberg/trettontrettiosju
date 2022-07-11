@@ -1,16 +1,21 @@
 /** @format */
 
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { offices } from "../../../constants/employees";
-import { employeesData } from "../../../store/employees/employeesSlice";
+import {
+ employeesActions,
+ employeesData,
+} from "../../../store/employees/employeesSlice";
 import { If } from "../../helpers";
 import { Button, InputText, InputCheckbox } from "../general";
 
 import "./toolsArea.style.scss";
 
 export const ToolsArea = () => {
+ const dispatch = useDispatch();
  const { employees, layout } = useSelector(employeesData);
+ const { setLayout } = useSelector(employeesActions);
 
  const [filter, setFilter] = useState({
   name: "",
@@ -67,13 +72,13 @@ export const ToolsArea = () => {
     <i
      className="fa-solid fa-list"
      onClick={() => {
-      if (layout !== 1) console.log("swag");
+      if (layout !== 1) dispatch(setLayout(1));
      }}
     ></i>
     <i
      className="fa-solid fa-qrcode"
      onClick={() => {
-      if (layout !== 0) console.log("swag");
+      if (layout !== 0) dispatch(setLayout(0));
      }}
     ></i>
    </div>
