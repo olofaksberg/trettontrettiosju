@@ -7,6 +7,7 @@ import "./employeesContainer.style.scss";
 import { EmployeeListCard, EmployeeMainCard } from "../employeeCards";
 import { useEffect, useState } from "react";
 import { LayoutSettings } from "./components";
+import { IemployeeModel } from "../../../constants/employees";
 
 export const EmployeesContainer = () => {
  const { employees, filteredEmployees, layout } = useSelector(employeesData);
@@ -27,7 +28,7 @@ export const EmployeesContainer = () => {
    <section
     className={`employees-container ${layout === 0 ? "cards" : "list"}`}
    >
-    {employeesArray.map((d: any, i: number) => {
+    {employeesArray.map((d: IemployeeModel) => {
      return layout === 1 ? (
       <EmployeeListCard employee={d} />
      ) : (

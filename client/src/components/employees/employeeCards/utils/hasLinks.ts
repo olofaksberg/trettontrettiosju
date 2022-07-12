@@ -1,22 +1,6 @@
-interface IhasLinks {
-    email: string | null,
-    gitHub: string | null,
-    highlighted: boolean,
-    imagePortraitUrl: string | null,
-    imageWallOfLeetUrl: string | null,
-    linkedIn: string | null,
-    mainText: string | null,
-    manager: string | null,
-    name: string | null,
-    office: string | null,
-    orgUnit: string | null,
-    phoneNumber: string | null,
-    published: boolean,
-    stackOverflow: string | null,
-    twitter: string | null,
-}
+import { IemployeeModel } from "../../../../constants/employees";
 
-export const hasLinks = (e: IhasLinks) => {
+export const hasLinks = (e: IemployeeModel) => {
     if (e.gitHub || e.linkedIn || e.twitter) {
         return true;
     } else {

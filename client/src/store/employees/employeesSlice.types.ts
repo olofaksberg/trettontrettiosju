@@ -1,8 +1,10 @@
+import { IemployeeModel } from "../../constants/employees";
+
 export interface IinitState {
-    employees: any[],
-    chosenEmployee: any,
+    employees: IemployeeModel[],
+    chosenEmployee: IemployeeModel | null,
     layout: number,
-    filteredEmployees: any[],
+    filteredEmployees: IemployeeModel[],
     status: number,
     error: string | null | undefined,
     message: string | null,
