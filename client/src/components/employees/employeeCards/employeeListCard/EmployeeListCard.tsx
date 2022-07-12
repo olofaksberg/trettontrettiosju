@@ -1,6 +1,6 @@
 /** @format */
 
-import { Image } from "../../../layouts";
+import { Image } from "@/components/layouts";
 
 import { If } from "../../../helpers";
 import { IemployeeListCardProps } from "./employeeListCard.types";

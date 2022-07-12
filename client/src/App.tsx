@@ -2,14 +2,15 @@
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { EmployeesContainer } from "./components/employees";
-import { EmployeeModal } from "./components/employees/employeeModal/EmployeeModal";
-import { If } from "./components/helpers";
-import { Header, ToolsArea } from "./components/layouts";
-import { statuses } from "./constants/http/statuses";
-import { AppDispatch } from "./store";
-import { employeesData } from "./store/employees/employeesSlice";
-import { fetchEmployees } from "./store/employees/reducers";
+
+import { EmployeesContainer, EmployeeModal } from "@/components/employees";
+import { If } from "@/components/helpers";
+import { Header, ToolsArea } from "@/components/layouts";
+
+import { statuses } from "@/constants";
+
+import { AppDispatch } from "@/store";
+import { employeesData, fetchEmployees } from "@/store/employees";
 
 import "./style/main.scss";
 
