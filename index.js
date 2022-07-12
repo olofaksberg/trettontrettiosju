@@ -21,12 +21,12 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.use("/", express.static("./client/public"));
+app.use("/", express.static("./client/build"));
 app.use("/", index);
 
 app.get("*", (req, res) =>
  res.sendFile("index.html", {
-  root: "./client/public",
+  root: "./client/build",
  })
 );
 
