@@ -2,9 +2,10 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
+import { statuses } from "@/constants";
+
 import { fetchActions, stateActions } from "./reducers";
 import { IinitState } from "./employeesSlice.types";
-import { statuses } from "../../constants/http/statuses";
 
 const initialState: IinitState = {
     employees: [],

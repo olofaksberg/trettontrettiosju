@@ -1,8 +1,8 @@
 /** @format */
 
-import { If } from "../../../helpers";
-import { IimageProps } from "./image.types";
+import { If } from "@/components/helpers";
 
+import { IimageProps } from "./image.types";
 import "./image.style.scss";
 
 export const Image = (props: IimageProps) => {

@@ -1,7 +1,6 @@
 /** @format */
 
 import { IinputCheckboxProps } from "./inputCheckbox.types";
-
 import "./inputCheckbox.style.scss";
 
 export const InputCheckbox = (props: IinputCheckboxProps) => {

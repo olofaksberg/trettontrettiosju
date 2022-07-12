@@ -1,4 +1,4 @@
-import { IemployeeModel } from "../../../../constants/employees";
+import { IemployeeModel } from "@/constants";
 
 export const hasLinks = (e: IemployeeModel) => {
     if (e.gitHub || e.linkedIn || e.twitter) {

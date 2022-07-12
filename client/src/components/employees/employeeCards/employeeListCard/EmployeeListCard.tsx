@@ -1,12 +1,11 @@
 /** @format */
 
+import { If } from "@/components/helpers";
 import { Image } from "@/components/layouts";
 
-import { If } from "../../../helpers";
-import { IemployeeListCardProps } from "./employeeListCard.types";
-
-import "./employeeListCard.style.scss";
 import { hasLinks } from "../utils/hasLinks";
+import { IemployeeListCardProps } from "./employeeListCard.types";
+import "./employeeListCard.style.scss";
 
 export const EmployeeListCard = (props: IemployeeListCardProps) => {
  const { employee } = props;

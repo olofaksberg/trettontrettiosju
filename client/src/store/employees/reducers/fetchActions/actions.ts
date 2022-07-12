@@ -1,9 +1,10 @@
 import { ActionReducerMapBuilder } from "@reduxjs/toolkit"
-import { statuses } from "../../../../constants/http/statuses";
 
-import { IinitState } from "../../employeesSlice.types";
+import { statuses } from "@/constants";
+
 import { fetchEmployees } from "./fetches";
 
+import { IinitState } from "../../employeesSlice.types";
 
 export const fetchActions = (builder: ActionReducerMapBuilder<IinitState>) => {
     builder

@@ -1,12 +1,13 @@
 /** @format */
 
-import { Image } from "../../../layouts";
-import { IemployeeMainCardProps } from "./employeeMainCard.types";
-
-import { If } from "../../../helpers";
 import { useDispatch, useSelector } from "react-redux";
-import { employeesActions } from "../../../../store/employees/employeesSlice";
 
+import { If } from "@/components/helpers";
+import { Image } from "@/components/layouts";
+
+import { employeesActions } from "@/store/employees";
+
+import { IemployeeMainCardProps } from "./employeeMainCard.types";
 import "./employeeMainCard.style.scss";
 
 export const EmployeeMainCard = (props: IemployeeMainCardProps) => {

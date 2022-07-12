@@ -1,13 +1,14 @@
 /** @format */
 
-import { useSelector } from "react-redux";
-import { employeesData } from "../../../store/employees/employeesSlice";
-
-import { EmployeeListCard, EmployeeMainCard } from "../employeeCards";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+
+import { EmployeeListCard, EmployeeMainCard } from "@/components/employees";
 import { LayoutSettings } from "./components";
-import { IemployeeModel } from "../../../constants/employees";
-import { employeesLayout } from "../../../constants/layouts";
+
+import { IemployeeModel, employeesLayout } from "@/constants";
+
+import { employeesData } from "@/store/employees";
 
 import "./employeesContainer.style.scss";
 

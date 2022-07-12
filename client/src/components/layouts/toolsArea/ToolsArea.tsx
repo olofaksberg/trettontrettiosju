@@ -1,8 +1,9 @@
 /** @format */
 
-import { IemployeeModel, offices } from "../../../constants/employees";
-import { If } from "../../helpers";
-import { Button, InputText, InputCheckbox } from "../general";
+import { If } from "@/components/helpers";
+import { Button, InputText, InputCheckbox } from "@/components/layouts";
+
+import { IemployeeModel, offices } from "@/constants";
 
 import { useHandleToolsArea } from "./utils";
 import "./toolsArea.style.scss";

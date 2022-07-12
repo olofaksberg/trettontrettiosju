@@ -1,9 +1,7 @@
-
-import { IemployeeModel } from "../../../../constants/employees";
 import { IinitState } from "../../employeesSlice.types";
 
 interface Iaction {
-    payload: any;
+    payload: any; // sry
     type: string;
 }
 

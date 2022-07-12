@@ -1,7 +1,6 @@
 /** @format */
 
 import { IbuttonProps } from "./button.types";
-
 import "./button.style.scss";
 
 export const Button = (props: IbuttonProps) => {

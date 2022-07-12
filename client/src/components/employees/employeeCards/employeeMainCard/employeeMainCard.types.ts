@@ -1,4 +1,4 @@
-import { IemployeeModel } from "../../../../constants/employees";
+import { IemployeeModel } from "@/constants";
 
 export interface IemployeeMainCardProps {
     employee: IemployeeModel,

@@ -1,4 +1,3 @@
-
 export interface IbuttonProps {
     iconClassName: string,
     text: string;

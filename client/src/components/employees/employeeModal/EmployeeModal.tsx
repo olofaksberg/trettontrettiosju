@@ -1,12 +1,10 @@
 /** @format */
 
 import { useDispatch, useSelector } from "react-redux";
-import {
- employeesActions,
- employeesData,
-} from "../../../store/employees/employeesSlice";
 
-import { Image } from "../../layouts";
+import { Image } from "@/components/layouts";
+
+import { employeesActions, employeesData } from "@/store/employees";
 
 import "./employeeModal.style.scss";
 
