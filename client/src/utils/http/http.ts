@@ -1,6 +1,6 @@
 import { IGET } from "./http.types";
 
-const api_address = "https://trettontrettiosju.herokuapp.com/";
+const api_address = "https://trettontrettiosju.herokuapp.com";
 
 
 export const GET: IGET = async (endpoint, signal) => {
