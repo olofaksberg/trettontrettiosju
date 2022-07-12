@@ -1,17 +1,11 @@
 /** @format */
 
+@import "../../../../../style/color";
+
 .input-text {
  position: relative;
  height: 2.8rem;
  width: 30rem;
-
- //  input::-webkit-outer-spin-button,
- //  input::-webkit-inner-spin-button {
- //   -webkit-appearance: none;
- //  }
- //  input[type="number"] {
- //   -moz-appearance: textfield;
- //  }
 
  .input__field {
   position: absolute;
@@ -19,10 +13,10 @@
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid grey;
+  border-bottom: 2px solid $fontGreyM;
   outline: 0;
   font-size: 1.3rem;
-  color: grey;
+  color: $fontGreyMD;
   padding: 7px 0 4px 0;
   background: transparent;
   transition: border-color 0.2s;
@@ -45,7 +39,7 @@
   display: block;
   transition: 0.2s;
   font-size: 1.3rem;
-  color: grey;
+  color: $fontGreyMD;
  }
 
  .input__field:focus {
@@ -55,7 +49,7 @@
    display: block;
    transition: 0.2s;
    font-size: 1rem;
-   color: grey;
+   color: $fontGreyM;
    font-weight: 700;
    opacity: 0.9;
   }

@@ -15,7 +15,7 @@ export const Image = (props: IimageProps) => {
    </If>
 
    <If condition={!source}>
-    <div className="no-img">No pic :(</div>
+    <img src={`https://source.unsplash.com/random/?nerd`} alt="" />
    </If>
   </div>
  );

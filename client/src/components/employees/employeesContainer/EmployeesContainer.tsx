@@ -3,17 +3,18 @@
 import { useSelector } from "react-redux";
 import { employeesData } from "../../../store/employees/employeesSlice";
 
-import "./employeesContainer.style.scss";
 import { EmployeeListCard, EmployeeMainCard } from "../employeeCards";
 import { useEffect, useState } from "react";
 import { LayoutSettings } from "./components";
 import { IemployeeModel } from "../../../constants/employees";
 import { employeesLayout } from "../../../constants/layouts";
 
+import "./employeesContainer.style.scss";
+
 export const EmployeesContainer = () => {
  const { employees, filteredEmployees, layout } = useSelector(employeesData);
 
- const [employeesArray, setEmployeesArray] = useState([]);
+ const [employeesArray, setEmployeesArray] = useState<IemployeeModel[]>([]);
 
  useEffect(() => {
   if (filteredEmployees.length > 0) {
@@ -31,7 +32,7 @@ export const EmployeesContainer = () => {
      layout === employeesLayout.CARD ? "cards" : "list"
     }`}
    >
-    {employeesArray.map((d: IemployeeModel) => {
+    {employeesArray.map((d) => {
      return layout === employeesLayout.CARD ? (
       <EmployeeMainCard employee={d} />
      ) : (

@@ -5,7 +5,7 @@ import { IinputCheckboxProps } from "./inputCheckbox.types";
 import "./inputCheckbox.style.scss";
 
 export const InputCheckbox = (props: IinputCheckboxProps) => {
- const { name, label, value, reference, action } = props;
+ const { name, label, reference, action } = props;
  return (
   <div className="input-checkbox">
    <input type="checkbox" name={name} ref={reference} onChange={action} />

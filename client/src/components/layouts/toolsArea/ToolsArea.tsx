@@ -1,11 +1,11 @@
 /** @format */
 
-import { offices } from "../../../constants/employees";
+import { IemployeeModel, offices } from "../../../constants/employees";
 import { If } from "../../helpers";
 import { Button, InputText, InputCheckbox } from "../general";
 
-import "./toolsArea.style.scss";
 import { useHandleToolsArea } from "./utils";
+import "./toolsArea.style.scss";
 
 export const ToolsArea = () => {
  const {
@@ -38,7 +38,7 @@ export const ToolsArea = () => {
         label="Name"
         value={filter.name}
         action={(e) =>
-         setFilter((prev: any) => {
+         setFilter((prev) => {
           return {
            ...prev,
            name: e.target.value,
@@ -50,12 +50,12 @@ export const ToolsArea = () => {
        <If condition={filter.name !== ""}>
         <div className="searchRes">
          {employees
-          .filter((d: any) => d.name.includes(filter.name))
-          .map((d: any) => {
+          .filter((d: IemployeeModel) => d.name.includes(filter.name))
+          .map((d: IemployeeModel) => {
            return (
             <div
              onClick={() => {
-              setFilter((prev: any) => {
+              setFilter((prev) => {
                return {
                 ...prev,
                 name: d.name,
@@ -79,11 +79,11 @@ export const ToolsArea = () => {
           name={d}
           label={d}
           action={(e) =>
-           setFilter((prev: any) => {
+           setFilter((prev) => {
             return {
              ...prev,
              office: prev.office.includes(e.target.name)
-              ? prev.office.filter((d: any) => d !== e.target.name)
+              ? prev.office.filter((d) => d !== e.target.name)
               : [...prev.office, e.target.name],
             };
            })

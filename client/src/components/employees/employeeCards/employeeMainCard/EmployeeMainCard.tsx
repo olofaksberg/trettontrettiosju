@@ -3,10 +3,11 @@
 import { Image } from "../../../layouts";
 import { IemployeeMainCardProps } from "./employeeMainCard.types";
 
-import "./employeeMainCard.style.scss";
 import { If } from "../../../helpers";
 import { useDispatch, useSelector } from "react-redux";
 import { employeesActions } from "../../../../store/employees/employeesSlice";
+
+import "./employeeMainCard.style.scss";
 
 export const EmployeeMainCard = (props: IemployeeMainCardProps) => {
  const { employee } = props;
@@ -58,7 +59,7 @@ export const EmployeeMainCard = (props: IemployeeMainCardProps) => {
      className="more-info"
      onClick={() => dispatch(setChosenEmployee(employee))}
     >
-     More about {employee.name?.split(" ")[0]}
+     More about {employee.name.split(" ")[0]}
     </div>
    </div>
   </div>

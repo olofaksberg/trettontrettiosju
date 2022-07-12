@@ -2,13 +2,18 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { employeesActions, employeesData } from "../../../../store/employees/employeesSlice";
 
+interface Ifilter {
+    name: string,
+    office: string[]
+}
+
 export const useHandleToolsArea = () => {
     const dispatch = useDispatch();
     const { employees } = useSelector(employeesData);
     const { setFilteredEmployees } = useSelector(employeesActions);
-    const [showSearch, setShowSearch] = useState(false);
 
-    const [filter, setFilter] = useState({
+    const [showSearch, setShowSearch] = useState<boolean>(false);
+    const [filter, setFilter] = useState<Ifilter>({
         name: "",
         office: [],
     });

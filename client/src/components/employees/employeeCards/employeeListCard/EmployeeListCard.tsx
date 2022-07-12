@@ -3,8 +3,6 @@
 import { Image } from "../../../layouts";
 
 import { If } from "../../../helpers";
-import { useDispatch, useSelector } from "react-redux";
-import { employeesActions } from "../../../../store/employees/employeesSlice";
 import { IemployeeListCardProps } from "./employeeListCard.types";
 
 import "./employeeListCard.style.scss";
@@ -12,8 +10,7 @@ import { hasLinks } from "../utils/hasLinks";
 
 export const EmployeeListCard = (props: IemployeeListCardProps) => {
  const { employee } = props;
- const dispatch = useDispatch();
- const { setChosenEmployee } = useSelector(employeesActions);
+
  return (
   <div className={`employee-listcard flex`}>
    <Image source={employee.imagePortraitUrl} />

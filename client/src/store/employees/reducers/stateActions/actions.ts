@@ -17,7 +17,7 @@ export const stateActions = {
     setFilteredEmployees: (state: IinitState, action: Iaction) => {
         const filter = action.payload;
         if (!!filter) {
-            state.filteredEmployees = state.employees.filter((d: IemployeeModel) => {
+            state.filteredEmployees = state.employees.filter((d) => {
                 if (filter.office.length > 0) {
                     return d.name.includes(filter.name) && filter.office.includes(d.office)
                 } else {
