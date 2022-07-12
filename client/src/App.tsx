@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useMediaQuery } from "react-responsive";
 
 import { EmployeesContainer, EmployeeModal } from "@/components/employees";
 import { If } from "@/components/helpers";
@@ -14,9 +15,15 @@ import { employeesData, fetchEmployees } from "@/store/employees";
 
 import "./style/main.scss";
 
+import { SmallScreenContext } from "./components/helpers/smallScreenContext/SmallScreenContext";
+
+// export const ScreenContext = createContext<>(null);
+
 const App = () => {
  const dispatch = useDispatch<AppDispatch>();
  const { employeesStatus, chosenEmployee } = useSelector(employeesData);
+
+ const isSmallScreen = useMediaQuery({ query: "(max-width: 900px)" });
 
  useEffect(() => {
   if (employeesStatus === statuses.IDLE) {
@@ -32,13 +39,15 @@ const App = () => {
 
  return (
   <div className="App">
-   <If condition={!!chosenEmployee}>
-    <EmployeeModal />
-   </If>
+   <SmallScreenContext.Provider value={{ isSmallScreen }}>
+    <If condition={!!chosenEmployee}>
+     <EmployeeModal />
+    </If>
 
-   <Header />
-   <ToolsArea />
-   <EmployeesContainer />
+    <Header />
+    <ToolsArea />
+    <EmployeesContainer />
+   </SmallScreenContext.Provider>
   </div>
  );
 };

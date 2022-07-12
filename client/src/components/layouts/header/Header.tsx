@@ -1,11 +1,21 @@
 /** @format */
 
+import { useSmallScreen } from "@/components/helpers";
+import { If } from "@/components/helpers";
+
 import "./header.style.scss";
 
 export const Header = () => {
+ const { isSmallScreen } = useSmallScreen();
+
  return (
   <header>
-   <h1>the elite of trettontrettio7</h1>
+   <If condition={!isSmallScreen}>
+    <h1>trettontrettio7</h1>
+   </If>
+   <If condition={isSmallScreen}>
+    <h1>1337</h1>
+   </If>
   </header>
  );
 };
