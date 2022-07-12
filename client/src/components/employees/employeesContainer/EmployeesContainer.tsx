@@ -8,6 +8,7 @@ import { EmployeeListCard, EmployeeMainCard } from "../employeeCards";
 import { useEffect, useState } from "react";
 import { LayoutSettings } from "./components";
 import { IemployeeModel } from "../../../constants/employees";
+import { employeesLayout } from "../../../constants/layouts";
 
 export const EmployeesContainer = () => {
  const { employees, filteredEmployees, layout } = useSelector(employeesData);
@@ -26,13 +27,15 @@ export const EmployeesContainer = () => {
   <>
    <LayoutSettings />
    <section
-    className={`employees-container ${layout === 0 ? "cards" : "list"}`}
+    className={`employees-container ${
+     layout === employeesLayout.CARD ? "cards" : "list"
+    }`}
    >
     {employeesArray.map((d: IemployeeModel) => {
-     return layout === 1 ? (
-      <EmployeeListCard employee={d} />
-     ) : (
+     return layout === employeesLayout.CARD ? (
       <EmployeeMainCard employee={d} />
+     ) : (
+      <EmployeeListCard employee={d} />
      );
     })}
    </section>

@@ -1,6 +1,7 @@
 /** @format */
 
 import { useDispatch, useSelector } from "react-redux";
+import { employeesLayout } from "../../../../../constants/layouts";
 import {
  employeesActions,
  employeesData,
@@ -16,15 +17,21 @@ export const LayoutSettings = () => {
  return (
   <div className="layouts">
    <i
-    className={`fa-solid fa-list ${layout === 1 ? "active" : ""}`}
+    className={`fa-solid fa-list ${
+     layout === employeesLayout.LIST ? "active" : ""
+    }`}
     onClick={() => {
-     if (layout !== 1) dispatch(setLayout(1));
+     if (layout !== employeesLayout.LIST)
+      dispatch(setLayout(employeesLayout.LIST));
     }}
    ></i>
    <i
-    className={`fa-solid fa-qrcode ${layout === 0 ? "active" : ""}`}
+    className={`fa-solid fa-qrcode ${
+     layout === employeesLayout.CARD ? "active" : ""
+    }`}
     onClick={() => {
-     if (layout !== 0) dispatch(setLayout(0));
+     if (layout !== employeesLayout.CARD)
+      dispatch(setLayout(employeesLayout.CARD));
     }}
    ></i>
   </div>
