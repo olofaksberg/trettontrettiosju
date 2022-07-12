@@ -1,6 +1,7 @@
 /** @format */
 
 import { If } from "@/components/helpers";
+import { useSmallScreen } from "@/components/helpers";
 import { Button, InputText, InputCheckbox } from "@/components/layouts";
 
 import { IemployeeModel, offices } from "@/constants";
@@ -18,9 +19,10 @@ export const ToolsArea = () => {
   reset,
   search,
  } = useHandleToolsArea();
+ const { isSmallScreen } = useSmallScreen();
 
  return (
-  <section className="tools-container">
+  <section className={`tools-container ${isSmallScreen ? "small" : ""}`}>
    <h1 onClick={() => setShowSearch(!showSearch)}>
     Search Employees{" "}
     <span>
@@ -32,7 +34,7 @@ export const ToolsArea = () => {
 
    <If condition={showSearch}>
     <>
-     <section className="input-container flex JC-C FG-10">
+     <section className="input-container flex JC-C">
       <div className="m-top-1">
        <InputText
         name="search"

@@ -74,4 +74,37 @@
    }
   }
  }
+
+ &.small {
+  .container {
+   position: relative;
+
+   .modal-left {
+    z-index: 2;
+    margin-top: 2rem;
+
+    h1 {
+     color: $fontGreyD;
+    }
+
+    div {
+     color: $fontGreyDD;
+    }
+   }
+
+   .modal-right {
+    max-width: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+
+    .image-container {
+     border-radius: 20px 20px 0 0;
+    }
+   }
+  }
+ }
 }

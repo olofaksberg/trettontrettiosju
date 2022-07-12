@@ -3,6 +3,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import { Image } from "@/components/layouts";
+import { useSmallScreen } from "@/components/helpers";
 
 import { employeesActions, employeesData } from "@/store/employees";
 
@@ -12,13 +13,14 @@ export const EmployeeModal = () => {
  const dispatch = useDispatch();
  const { chosenEmployee } = useSelector(employeesData);
  const { setChosenEmployee } = useSelector(employeesActions);
+ const { isSmallScreen } = useSmallScreen();
 
  const mainText = chosenEmployee.mainText
   ? chosenEmployee.mainText.replaceAll(/<[^>]*>/g, " ")
   : `No text about ${chosenEmployee.name.split(" ")[0]}`;
 
  return (
-  <section className="employee-modal">
+  <section className={`employee-modal ${isSmallScreen ? "small" : ""}`}>
    <div className="container flex JC-SB">
     <div className="modal-left">
      <h1 className="emp-name">{chosenEmployee.name}</h1>

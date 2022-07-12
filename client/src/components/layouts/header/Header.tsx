@@ -1,7 +1,7 @@
 /** @format */
 
-import { useSmallScreen } from "@/components/helpers";
 import { If } from "@/components/helpers";
+import { useSmallScreen } from "@/components/helpers";
 
 import "./header.style.scss";
 
