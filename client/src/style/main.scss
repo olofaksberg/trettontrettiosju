@@ -7,7 +7,6 @@
 @import "./spacing";
 
 * {
- //  border: 1px solid black;
  padding: 0;
  margin: 0;
  box-sizing: border-box;
@@ -18,4 +17,5 @@
 
 .App {
  background-color: $mainGrey;
+ min-height: 100vh;
 }

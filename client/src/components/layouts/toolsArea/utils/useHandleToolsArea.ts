@@ -21,11 +21,19 @@ export const useHandleToolsArea = () => {
 
     const reset = () => {
         dispatch(setFilteredEmployees(false));
-        setShowSearch(false);
+        setFilter({
+            name: "",
+            office: [],
+        });
+        if (showSearch) setShowSearch(false);
     };
 
     const search = () => {
         dispatch(setFilteredEmployees(filter));
+        setFilter({
+            name: "",
+            office: [],
+        });
         setShowSearch(false);
     };
 
