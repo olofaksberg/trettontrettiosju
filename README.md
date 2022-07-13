@@ -49,8 +49,11 @@ A list of the stories I selected and why I chose the features that I did:
 
 - Filter by name and office: This kind of coding I enjoy :) It also gives the product a lot more professionalism with features like this. The story "Sort by name and office" i felt wasn't needed so I skipped it.
 - Enable switch between a grid and a different view (such as list): A feature that brings some "life" to the product. Worth doing, doesn't need more than toggling a classname basically.
+- Available on a free public url (such as Azure, Heroku): https://trettontrettiosju.herokuapp.com/
 
 - Use Typescript (or similar, no any’s!): TypeScript is something I really wan't to get better at. Sadly we didn't learn any of it during my education, so this is my second project only using TS. I know it's not perfect, but it was the first story I chose to implement, and i feel like i have made progress during this case.
+
+- 
 
 ---
 
