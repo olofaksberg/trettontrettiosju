@@ -14,6 +14,7 @@ export const stateActions = {
     },
     setFilteredEmployees: (state: IinitState, action: Iaction) => {
         const filter = action.payload;
+
         if (!!filter) {
             state.filteredEmployees = state.employees.filter((d) => {
                 if (filter.office.length > 0) {
@@ -23,7 +24,7 @@ export const stateActions = {
                 }
             })
         } else {
-            state.filteredEmployees = [];
+            state.filteredEmployees = false;
         }
     },
 }

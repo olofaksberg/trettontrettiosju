@@ -2,7 +2,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
-import { statuses } from "@/constants";
+import { employeesLayout, statuses } from "@/constants";
 
 import { fetchActions, stateActions } from "./reducers";
 import { IinitState } from "./employeesSlice.types";
@@ -10,8 +10,8 @@ import { IinitState } from "./employeesSlice.types";
 const initialState: IinitState = {
     employees: [],
     chosenEmployee: null,
-    layout: 0,
-    filteredEmployees: [],
+    layout: employeesLayout.CARD,
+    filteredEmployees: false,
     status: statuses.IDLE,
     error: null,
     message: null,

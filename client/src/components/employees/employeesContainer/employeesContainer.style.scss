@@ -1,9 +1,12 @@
 /** @format */
 
+@import "@/style/color";
+
 .employees-container {
  display: flex;
  gap: 2rem;
  padding: 1rem 2rem;
+ min-height: 100%;
 
  &.cards {
   justify-content: center;
@@ -13,5 +16,15 @@
 
  &.list {
   flex-direction: column;
+ }
+
+ .no-results {
+  text-align: center;
+  gap: 3rem;
+
+  h3 {
+   margin-bottom: 1rem;
+   color: $fontGreyD;
+  }
  }
 }
