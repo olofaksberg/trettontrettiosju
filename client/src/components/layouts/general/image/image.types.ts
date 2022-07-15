@@ -1,3 +1,3 @@
 export interface IimageProps {
-    source: string | null
+    source: string | null | undefined
 }
